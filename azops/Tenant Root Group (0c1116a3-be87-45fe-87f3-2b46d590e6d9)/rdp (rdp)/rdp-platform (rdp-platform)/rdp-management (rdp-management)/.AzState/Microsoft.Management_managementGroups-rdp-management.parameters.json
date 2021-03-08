@@ -1,0 +1,29 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Id": "/providers/Microsoft.Management/managementGroups/rdp-management",
+        "Type": "/providers/Microsoft.Management/managementGroups",
+        "Name": "rdp-management",
+        "TenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+        "DisplayName": "rdp-management",
+        "UpdatedTime": "2021-02-21T22:37:07.2289489Z",
+        "UpdatedBy": "5dd101b6-60ae-4f23-9a0e-8fa4a269389b",
+        "ParentId": "/providers/Microsoft.Management/managementGroups/rdp-platform",
+        "ParentName": "rdp-platform",
+        "ParentDisplayName": "rdp-platform",
+        "Children": [
+          {
+            "Type": "/subscriptions",
+            "Id": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa",
+            "Name": "fb60a42a-db84-4d33-b9ce-63f9472f36aa",
+            "DisplayName": "RedDogPRoductions Monitoring (VSE 100)",
+            "Children": null
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": {
+          "principalId": "f931b038-fc0e-4c3f-b5e8-691061aaa5fa",
+          "tenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+          "type": "SystemAssigned"
+        },
+        "Location": "westeurope",
+        "Name": "Deploy-AKS-Policy",
+        "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/rdp-landingzones/providers/Microsoft.Authorization/policyAssignments/Deploy-AKS-Policy",
+        "Properties": {
+          "Description": "Deploy-AKS-Policy",
+          "DisplayName": "Deploy-AKS-Policy",
+          "NotScopes": null,
+          "Parameters": null,
+          "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a8eff44f-8c92-45c3-a3fb-9880802d67a7",
+          "Scope": "/providers/Microsoft.Management/managementGroups/rdp-landingzones"
+        },
+        "ResourceId": "/providers/Microsoft.Management/managementGroups/rdp-landingzones/providers/Microsoft.Authorization/policyAssignments/Deploy-AKS-Policy",
+        "ResourceName": "Deploy-AKS-Policy",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A0",
+          "tier": "Free"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Id": "/providers/Microsoft.Management/managementGroups/rdp-decommissioned",
+        "Type": "/providers/Microsoft.Management/managementGroups",
+        "Name": "rdp-decommissioned",
+        "TenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+        "DisplayName": "rdp-decommissioned",
+        "UpdatedTime": "2021-02-21T22:36:34.7995612Z",
+        "UpdatedBy": "5dd101b6-60ae-4f23-9a0e-8fa4a269389b",
+        "ParentId": "/providers/Microsoft.Management/managementGroups/rdp",
+        "ParentName": "rdp",
+        "ParentDisplayName": "rdp",
+        "Children": null
+      }
+    }
+  }
+}

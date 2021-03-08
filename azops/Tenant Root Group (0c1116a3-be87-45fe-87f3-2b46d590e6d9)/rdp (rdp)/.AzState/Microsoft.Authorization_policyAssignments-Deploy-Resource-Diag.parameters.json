@@ -1,0 +1,37 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": {
+          "principalId": "45d94a78-bd9c-4e4b-871e-e1f4c80930cf",
+          "tenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+          "type": "SystemAssigned"
+        },
+        "Location": "westeurope",
+        "Name": "Deploy-Resource-Diag",
+        "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/rdp/providers/Microsoft.Authorization/policyAssignments/Deploy-Resource-Diag",
+        "Properties": {
+          "Description": "Deploy-Resource-Diag",
+          "DisplayName": "Deploy-Resource-Diag",
+          "NotScopes": null,
+          "Parameters": {
+            "logAnalytics": {
+              "value": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa/resourcegroups/rdp-mgmt/providers/microsoft.operationalinsights/workspaces/rdp-la-fb60a42a-db84-4d33-b9ce-63f9472f36aa"
+            }
+          },
+          "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/rdp/providers/Microsoft.Authorization/policySetDefinitions/Deploy-Diag-LogAnalytics",
+          "Scope": "/providers/Microsoft.Management/managementGroups/rdp"
+        },
+        "ResourceId": "/providers/Microsoft.Management/managementGroups/rdp/providers/Microsoft.Authorization/policyAssignments/Deploy-Resource-Diag",
+        "ResourceName": "Deploy-Resource-Diag",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A0",
+          "tier": "Free"
+        }
+      }
+    }
+  }
+}
