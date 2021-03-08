@@ -1,0 +1,15 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Type": "/subscriptions",
+        "Id": "/subscriptions/ee0ed2ab-b709-4659-9a44-14b9695fba87",
+        "Name": "ee0ed2ab-b709-4659-9a44-14b9695fba87",
+        "DisplayName": "RedDogProductions Sandbox (PAYG)",
+        "Children": null
+      }
+    }
+  }
+}

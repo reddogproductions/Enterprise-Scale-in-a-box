@@ -1,0 +1,29 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": null,
+        "Location": null,
+        "Name": "Deny-RDP-from-internet",
+        "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/rdp-landingzones/providers/Microsoft.Authorization/policyAssignments/Deny-RDP-from-internet",
+        "Properties": {
+          "Description": "Deny-RDP-from-Internet",
+          "DisplayName": "Deny-RDP-from-Internet",
+          "NotScopes": null,
+          "Parameters": null,
+          "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/rdp/providers/Microsoft.Authorization/policyDefinitions/Deny-RDP-From-Internet",
+          "Scope": "/providers/Microsoft.Management/managementGroups/rdp-landingzones"
+        },
+        "ResourceId": "/providers/Microsoft.Management/managementGroups/rdp-landingzones/providers/Microsoft.Authorization/policyAssignments/Deny-RDP-from-internet",
+        "ResourceName": "Deny-RDP-from-internet",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A0",
+          "tier": "Free"
+        }
+      }
+    }
+  }
+}

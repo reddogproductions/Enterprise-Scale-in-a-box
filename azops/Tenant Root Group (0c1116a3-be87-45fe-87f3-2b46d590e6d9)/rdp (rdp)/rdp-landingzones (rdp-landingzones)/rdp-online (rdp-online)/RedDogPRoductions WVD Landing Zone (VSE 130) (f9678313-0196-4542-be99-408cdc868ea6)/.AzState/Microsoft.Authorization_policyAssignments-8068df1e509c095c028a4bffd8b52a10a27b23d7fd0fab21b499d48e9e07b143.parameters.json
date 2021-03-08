@@ -1,0 +1,37 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": {
+          "principalId": "fe90e172-f35d-437e-a8cb-52647f120e04",
+          "tenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+          "type": "SystemAssigned"
+        },
+        "Location": "westeurope",
+        "Name": "8068df1e509c095c028a4bffd8b52a10a27b23d7fd0fab21b499d48e9e07b143",
+        "PolicyAssignmentId": "/subscriptions/f9678313-0196-4542-be99-408cdc868ea6/providers/Microsoft.Authorization/policyAssignments/8068df1e509c095c028a4bffd8b52a10a27b23d7fd0fab21b499d48e9e07b143",
+        "Properties": {
+          "Description": null,
+          "DisplayName": "Deploy Dependency agent for Windows VMs",
+          "NotScopes": null,
+          "Parameters": {
+            "listOfImageIdToInclude": {
+              "value": null
+            }
+          },
+          "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c210e94-a481-4beb-95fa-1571b434fb04",
+          "Scope": "/subscriptions/f9678313-0196-4542-be99-408cdc868ea6"
+        },
+        "ResourceId": "/subscriptions/f9678313-0196-4542-be99-408cdc868ea6/providers/Microsoft.Authorization/policyAssignments/8068df1e509c095c028a4bffd8b52a10a27b23d7fd0fab21b499d48e9e07b143",
+        "ResourceName": "8068df1e509c095c028a4bffd8b52a10a27b23d7fd0fab21b499d48e9e07b143",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A1",
+          "tier": "Standard"
+        }
+      }
+    }
+  }
+}

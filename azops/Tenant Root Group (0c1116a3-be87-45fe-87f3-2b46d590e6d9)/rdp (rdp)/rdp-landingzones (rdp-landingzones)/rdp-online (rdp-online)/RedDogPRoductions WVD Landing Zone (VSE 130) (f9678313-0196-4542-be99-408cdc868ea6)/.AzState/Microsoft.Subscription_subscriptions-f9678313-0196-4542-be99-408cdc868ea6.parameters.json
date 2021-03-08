@@ -1,0 +1,15 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Type": "/subscriptions",
+        "Id": "/subscriptions/f9678313-0196-4542-be99-408cdc868ea6",
+        "Name": "f9678313-0196-4542-be99-408cdc868ea6",
+        "DisplayName": "RedDogPRoductions WVD Landing Zone (VSE 130)",
+        "Children": null
+      }
+    }
+  }
+}

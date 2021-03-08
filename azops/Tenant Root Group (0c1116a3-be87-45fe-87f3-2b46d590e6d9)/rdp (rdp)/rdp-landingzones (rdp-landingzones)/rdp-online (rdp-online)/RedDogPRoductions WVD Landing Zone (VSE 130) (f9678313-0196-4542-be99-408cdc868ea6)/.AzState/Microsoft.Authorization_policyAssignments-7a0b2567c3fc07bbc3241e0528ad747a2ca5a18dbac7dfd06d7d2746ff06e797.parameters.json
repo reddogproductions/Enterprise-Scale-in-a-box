@@ -1,0 +1,36 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": null,
+        "Location": null,
+        "Name": "7a0b2567c3fc07bbc3241e0528ad747a2ca5a18dbac7dfd06d7d2746ff06e797",
+        "PolicyAssignmentId": "/subscriptions/f9678313-0196-4542-be99-408cdc868ea6/providers/Microsoft.Authorization/policyAssignments/7a0b2567c3fc07bbc3241e0528ad747a2ca5a18dbac7dfd06d7d2746ff06e797",
+        "Properties": {
+          "Description": null,
+          "DisplayName": "Append a tag and its value to resources",
+          "NotScopes": null,
+          "Parameters": {
+            "tagName": {
+              "value": "environment"
+            },
+            "tagValue": {
+              "value": "production"
+            }
+          },
+          "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2a0e14a6-b0a6-4fab-991a-187a4f81c498",
+          "Scope": "/subscriptions/f9678313-0196-4542-be99-408cdc868ea6"
+        },
+        "ResourceId": "/subscriptions/f9678313-0196-4542-be99-408cdc868ea6/providers/Microsoft.Authorization/policyAssignments/7a0b2567c3fc07bbc3241e0528ad747a2ca5a18dbac7dfd06d7d2746ff06e797",
+        "ResourceName": "7a0b2567c3fc07bbc3241e0528ad747a2ca5a18dbac7dfd06d7d2746ff06e797",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A1",
+          "tier": "Standard"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Type": "/subscriptions",
+        "Id": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa",
+        "Name": "fb60a42a-db84-4d33-b9ce-63f9472f36aa",
+        "DisplayName": "RedDogPRoductions Monitoring (VSE 100)",
+        "Children": null
+      }
+    }
+  }
+}

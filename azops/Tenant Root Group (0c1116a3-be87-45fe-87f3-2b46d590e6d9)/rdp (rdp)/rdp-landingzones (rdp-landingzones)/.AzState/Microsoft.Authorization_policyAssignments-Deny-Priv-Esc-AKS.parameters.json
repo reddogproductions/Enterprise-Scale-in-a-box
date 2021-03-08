@@ -1,0 +1,37 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": {
+          "principalId": "ff1798c5-f78c-4fbb-8c73-d323c6f68e92",
+          "tenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+          "type": "SystemAssigned"
+        },
+        "Location": "westeurope",
+        "Name": "Deny-Priv-Esc-AKS",
+        "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/rdp-landingzones/providers/Microsoft.Authorization/policyAssignments/Deny-Priv-Esc-AKS",
+        "Properties": {
+          "Description": "Deny-Privileged-Escalations-AKS",
+          "DisplayName": "Deny-Privileged-Escalations-AKS",
+          "NotScopes": null,
+          "Parameters": {
+            "effect": {
+              "value": "deny"
+            }
+          },
+          "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c6e92c9-99f0-4e55-9cf2-0c234dc48f99",
+          "Scope": "/providers/Microsoft.Management/managementGroups/rdp-landingzones"
+        },
+        "ResourceId": "/providers/Microsoft.Management/managementGroups/rdp-landingzones/providers/Microsoft.Authorization/policyAssignments/Deny-Priv-Esc-AKS",
+        "ResourceName": "Deny-Priv-Esc-AKS",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A0",
+          "tier": "Free"
+        }
+      }
+    }
+  }
+}
