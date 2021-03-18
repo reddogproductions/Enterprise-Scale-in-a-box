@@ -1,0 +1,15 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Type": "/subscriptions",
+        "Id": "/subscriptions/2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
+        "Name": "2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
+        "DisplayName": "RedDogProductions Websites (MPN 100)",
+        "Children": null
+      }
+    }
+  }
+}
