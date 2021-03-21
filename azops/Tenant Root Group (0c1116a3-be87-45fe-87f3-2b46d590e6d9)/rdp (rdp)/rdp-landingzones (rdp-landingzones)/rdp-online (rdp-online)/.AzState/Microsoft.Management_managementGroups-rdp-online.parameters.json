@@ -21,13 +21,6 @@
             "Name": "f9678313-0196-4542-be99-408cdc868ea6",
             "DisplayName": "RedDogPRoductions Windows Virtual Desktop (VSE 130)",
             "Children": null
-          },
-          {
-            "Type": "/subscriptions",
-            "Id": "/subscriptions/2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
-            "Name": "2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
-            "DisplayName": "RedDogProductions Websites (MPN 100)",
-            "Children": null
           }
         ]
       }
