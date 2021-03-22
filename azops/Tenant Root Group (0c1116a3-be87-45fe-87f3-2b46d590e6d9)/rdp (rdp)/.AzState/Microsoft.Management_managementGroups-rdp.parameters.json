@@ -42,6 +42,13 @@
             "Name": "rdp-sandboxes",
             "DisplayName": "rdp-sandboxes",
             "Children": null
+          },
+          {
+            "Type": "/providers/Microsoft.Management/managementGroups",
+            "Id": "/providers/Microsoft.Management/managementGroups/rdp-identity",
+            "Name": "rdp-identity",
+            "DisplayName": "rdp-identity",
+            "Children": null
           }
         ]
       }
