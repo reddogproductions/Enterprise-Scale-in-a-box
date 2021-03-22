@@ -23,10 +23,10 @@
             "Children": null
           },
           {
-            "Type": "/subscriptions",
-            "Id": "/subscriptions/2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
-            "Name": "2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
-            "DisplayName": "RedDogProductions Identity (MPN 100)",
+            "Type": "/providers/Microsoft.Management/managementGroups",
+            "Id": "/providers/Microsoft.Management/managementGroups/rdp-connectivity",
+            "Name": "rdp-connectivity",
+            "DisplayName": "rdp-connectivity",
             "Children": null
           }
         ]

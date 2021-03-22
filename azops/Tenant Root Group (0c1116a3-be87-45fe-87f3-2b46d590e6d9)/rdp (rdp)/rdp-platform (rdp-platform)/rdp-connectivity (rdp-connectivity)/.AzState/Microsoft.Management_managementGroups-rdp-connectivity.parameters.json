@@ -1,0 +1,21 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Id": "/providers/Microsoft.Management/managementGroups/rdp-connectivity",
+        "Type": "/providers/Microsoft.Management/managementGroups",
+        "Name": "rdp-connectivity",
+        "TenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+        "DisplayName": "rdp-connectivity",
+        "UpdatedTime": "2021-03-22T16:35:58.2796627Z",
+        "UpdatedBy": "2db2f978-e55b-4bfb-88c0-23de26148a0c",
+        "ParentId": "/providers/Microsoft.Management/managementGroups/rdp-platform",
+        "ParentName": "rdp-platform",
+        "ParentDisplayName": "rdp-platform",
+        "Children": null
+      }
+    }
+  }
+}

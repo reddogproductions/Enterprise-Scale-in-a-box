@@ -1,0 +1,29 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Id": "/providers/Microsoft.Management/managementGroups/rdp-identity",
+        "Type": "/providers/Microsoft.Management/managementGroups",
+        "Name": "rdp-identity",
+        "TenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+        "DisplayName": "rdp-identity",
+        "UpdatedTime": "2021-03-22T16:36:40.5747294Z",
+        "UpdatedBy": "2db2f978-e55b-4bfb-88c0-23de26148a0c",
+        "ParentId": "/providers/Microsoft.Management/managementGroups/rdp",
+        "ParentName": "rdp",
+        "ParentDisplayName": "rdp",
+        "Children": [
+          {
+            "Type": "/subscriptions",
+            "Id": "/subscriptions/2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
+            "Name": "2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
+            "DisplayName": "RedDogProductions Identity (MPN 100)",
+            "Children": null
+          }
+        ]
+      }
+    }
+  }
+}
