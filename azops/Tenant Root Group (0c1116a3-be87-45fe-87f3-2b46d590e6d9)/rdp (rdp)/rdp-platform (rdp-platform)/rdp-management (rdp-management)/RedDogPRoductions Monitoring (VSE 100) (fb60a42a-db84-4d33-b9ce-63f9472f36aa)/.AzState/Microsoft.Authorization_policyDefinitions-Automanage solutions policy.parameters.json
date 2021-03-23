@@ -1,0 +1,55 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Name": "Automanage solutions policy",
+        "ResourceId": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa/providers/Microsoft.Authorization/policyDefinitions/Automanage solutions policy",
+        "ResourceName": "Automanage solutions policy",
+        "ResourceType": "Microsoft.Authorization/policyDefinitions",
+        "SubscriptionId": "fb60a42a-db84-4d33-b9ce-63f9472f36aa",
+        "PolicyDefinitionId": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa/providers/Microsoft.Authorization/policyDefinitions/Automanage solutions policy",
+        "Properties": {
+          "Description": "Monitors the Solution and ensures the workspace is linked",
+          "DisplayName": "Automanage solutions policy",
+          "Mode": "All",
+          "Parameters": {
+            "workspaceResourceId": {
+              "type": "String",
+              "metadata": {
+                "displayName": "WorkspaceId",
+                "description": "Workspace resource Id linked to this solution"
+              }
+            }
+          },
+          "PolicyRule": {
+            "if": {
+              "anyOf": [
+                {
+                  "allOf": [
+                    {
+                      "field": "type",
+                      "equals": "Microsoft.OperationsManagement/solutions"
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "field": "Microsoft.OperationsManagement/solutions/workspaceResourceId",
+                          "notEquals": "[parameters('workspaceResourceId')]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "then": {
+              "effect": "audit"
+            }
+          }
+        }
+      }
+    }
+  }
+}

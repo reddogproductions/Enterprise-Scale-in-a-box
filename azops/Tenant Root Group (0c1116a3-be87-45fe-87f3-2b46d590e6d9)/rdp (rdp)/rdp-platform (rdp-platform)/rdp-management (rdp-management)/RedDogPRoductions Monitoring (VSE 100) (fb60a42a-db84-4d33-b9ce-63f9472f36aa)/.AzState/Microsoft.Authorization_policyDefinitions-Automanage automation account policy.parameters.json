@@ -1,0 +1,62 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Name": "Automanage automation account policy",
+        "ResourceId": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa/providers/Microsoft.Authorization/policyDefinitions/Automanage automation account policy",
+        "ResourceName": "Automanage automation account policy",
+        "ResourceType": "Microsoft.Authorization/policyDefinitions",
+        "SubscriptionId": "fb60a42a-db84-4d33-b9ce-63f9472f36aa",
+        "PolicyDefinitionId": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa/providers/Microsoft.Authorization/policyDefinitions/Automanage automation account policy",
+        "Properties": {
+          "Description": "Monitors the Automation Account and ensures the location and name don't change",
+          "DisplayName": "Automanage automation account policy",
+          "Mode": "All",
+          "Parameters": {
+            "automationLocation": {
+              "type": "String",
+              "metadata": {
+                "displayName": "Automation Location",
+                "description": "Name of the location"
+              }
+            },
+            "automationName": {
+              "type": "String",
+              "metadata": {
+                "displayName": "Automation Name",
+                "description": "Name of the Automation Account"
+              }
+            }
+          },
+          "PolicyRule": {
+            "if": {
+              "allOf": [
+                {
+                  "field": "type",
+                  "equals": "Microsoft.Automation/automationAccounts"
+                },
+                {
+                  "anyOf": [
+                    {
+                      "field": "location",
+                      "notEquals": "[parameters('automationLocation')]"
+                    },
+                    {
+                      "field": "name",
+                      "notEquals": "[parameters('automationName')]"
+                    }
+                  ]
+                }
+              ]
+            },
+            "then": {
+              "effect": "audit"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Name": "Automanage Arc machine extension policy",
+        "ResourceId": "/subscriptions/2f29a413-2d9c-4696-b383-aa6e2fed9ec0/providers/Microsoft.Authorization/policyDefinitions/Automanage Arc machine extension policy",
+        "ResourceName": "Automanage Arc machine extension policy",
+        "ResourceType": "Microsoft.Authorization/policyDefinitions",
+        "SubscriptionId": "2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
+        "PolicyDefinitionId": "/subscriptions/2f29a413-2d9c-4696-b383-aa6e2fed9ec0/providers/Microsoft.Authorization/policyDefinitions/Automanage Arc machine extension policy",
+        "Properties": {
+          "Description": "Automanage Arc machine extension policy",
+          "DisplayName": "Automanage Arc machine extension policy",
+          "Mode": "Indexed",
+          "Parameters": {
+            "extensionType": {
+              "type": "String",
+              "metadata": {
+                "displayName": "extensionType",
+                "description": "Extension type installed to the Arc Machine"
+              }
+            }
+          },
+          "PolicyRule": {
+            "if": {
+              "allOf": [
+                {
+                  "field": "type",
+                  "equals": "Microsoft.HybridCompute/machines"
+                },
+                {
+                  "anyOf": [
+                    {
+                      "field": "Microsoft.HybridCompute/machines/osName",
+                      "like": "windows*"
+                    },
+                    {
+                      "field": "Microsoft.HybridCompute/machines/osName",
+                      "like": "linux*"
+                    }
+                  ]
+                }
+              ]
+            },
+            "then": {
+              "effect": "AuditIfNotExists",
+              "details": {
+                "type": "Microsoft.HybridCompute/machines/extensions",
+                "existenceCondition": {
+                  "allOf": [
+                    {
+                      "field": "Microsoft.HybridCompute/machines/extensions/type",
+                      "equals": "[parameters('extensionType')]"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

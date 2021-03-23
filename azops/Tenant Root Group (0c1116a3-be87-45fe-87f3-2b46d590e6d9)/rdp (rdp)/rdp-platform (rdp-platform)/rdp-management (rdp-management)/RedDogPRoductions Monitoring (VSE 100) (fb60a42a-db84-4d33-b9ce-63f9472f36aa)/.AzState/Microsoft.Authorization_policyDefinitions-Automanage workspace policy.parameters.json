@@ -1,0 +1,55 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Name": "Automanage workspace policy",
+        "ResourceId": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa/providers/Microsoft.Authorization/policyDefinitions/Automanage workspace policy",
+        "ResourceName": "Automanage workspace policy",
+        "ResourceType": "Microsoft.Authorization/policyDefinitions",
+        "SubscriptionId": "fb60a42a-db84-4d33-b9ce-63f9472f36aa",
+        "PolicyDefinitionId": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa/providers/Microsoft.Authorization/policyDefinitions/Automanage workspace policy",
+        "Properties": {
+          "Description": "Monitors workspace and ensures the automation account is linked",
+          "DisplayName": "Automanage workspace policy",
+          "Mode": "All",
+          "Parameters": {
+            "automationAccountId": {
+              "type": "String",
+              "metadata": {
+                "displayName": "AutomationId",
+                "description": "Automation Account resource Id linked to the workspace"
+              }
+            }
+          },
+          "PolicyRule": {
+            "if": {
+              "anyOf": [
+                {
+                  "allOf": [
+                    {
+                      "field": "type",
+                      "equals": "Microsoft.OperationalInsights/workspaces/linkedservices"
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "field": "microsoft.operationalinsights/workspaces/linkedservices/resourceId",
+                          "notEquals": "[parameters('automationAccountId')]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            "then": {
+              "effect": "audit"
+            }
+          }
+        }
+      }
+    }
+  }
+}
