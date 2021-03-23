@@ -1,0 +1,34 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Name": "Automanage VM backup policy",
+        "ResourceId": "/subscriptions/2f29a413-2d9c-4696-b383-aa6e2fed9ec0/providers/Microsoft.Authorization/policyDefinitions/Automanage VM backup policy",
+        "ResourceName": "Automanage VM backup policy",
+        "ResourceType": "Microsoft.Authorization/policyDefinitions",
+        "SubscriptionId": "2f29a413-2d9c-4696-b383-aa6e2fed9ec0",
+        "PolicyDefinitionId": "/subscriptions/2f29a413-2d9c-4696-b383-aa6e2fed9ec0/providers/Microsoft.Authorization/policyDefinitions/Automanage VM backup policy",
+        "Properties": {
+          "Description": "Automanage VM backup policy",
+          "DisplayName": "Automanage VM backup policy",
+          "Mode": "Indexed",
+          "Parameters": null,
+          "PolicyRule": {
+            "if": {
+              "field": "type",
+              "equals": "Microsoft.Compute/virtualMachines"
+            },
+            "then": {
+              "effect": "AuditIfNotExists",
+              "details": {
+                "type": "Microsoft.RecoveryServices/backupprotecteditems"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
