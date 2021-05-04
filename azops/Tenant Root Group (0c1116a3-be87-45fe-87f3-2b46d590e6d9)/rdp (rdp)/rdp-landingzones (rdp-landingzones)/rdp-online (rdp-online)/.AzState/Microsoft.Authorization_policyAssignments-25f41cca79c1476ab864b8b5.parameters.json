@@ -1,0 +1,29 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": null,
+        "Location": null,
+        "Name": "25f41cca79c1476ab864b8b5",
+        "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/rdp-online/providers/Microsoft.Authorization/policyAssignments/25f41cca79c1476ab864b8b5",
+        "Properties": {
+          "Description": null,
+          "DisplayName": "Deny vNet peering",
+          "NotScopes": null,
+          "Parameters": {},
+          "PolicyDefinitionId": "/providers/Microsoft.Management/managementGroups/rdp/providers/Microsoft.Authorization/policyDefinitions/Deny-VNet-Peering",
+          "Scope": "/providers/Microsoft.Management/managementGroups/rdp-online"
+        },
+        "ResourceId": "/providers/Microsoft.Management/managementGroups/rdp-online/providers/Microsoft.Authorization/policyAssignments/25f41cca79c1476ab864b8b5",
+        "ResourceName": "25f41cca79c1476ab864b8b5",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A0",
+          "tier": "Free"
+        }
+      }
+    }
+  }
+}
