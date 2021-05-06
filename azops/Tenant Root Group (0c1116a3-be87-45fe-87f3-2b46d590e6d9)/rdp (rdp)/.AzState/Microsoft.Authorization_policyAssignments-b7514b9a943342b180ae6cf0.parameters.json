@@ -1,0 +1,37 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": {
+          "principalId": "1dff7d94-5ae5-4c71-a97a-d0720cfd6dc6",
+          "tenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+          "type": "SystemAssigned"
+        },
+        "Location": "westeurope",
+        "Name": "b7514b9a943342b180ae6cf0",
+        "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/rdp/providers/Microsoft.Authorization/policyAssignments/b7514b9a943342b180ae6cf0",
+        "Properties": {
+          "Description": null,
+          "DisplayName": "Configure diagnostic settings for storage accounts to Log Analytics workspace",
+          "NotScopes": null,
+          "Parameters": {
+            "logAnalytics": {
+              "value": "/subscriptions/fb60a42a-db84-4d33-b9ce-63f9472f36aa/resourcegroups/rdp-mgmt/providers/microsoft.operationalinsights/workspaces/rdp-la-fb60a42a-db84-4d33-b9ce-63f9472f36aa"
+            }
+          },
+          "PolicyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6f8f98a4-f108-47cb-8e98-91a0d85cd474",
+          "Scope": "/providers/Microsoft.Management/managementGroups/rdp"
+        },
+        "ResourceId": "/providers/Microsoft.Management/managementGroups/rdp/providers/Microsoft.Authorization/policyAssignments/b7514b9a943342b180ae6cf0",
+        "ResourceName": "b7514b9a943342b180ae6cf0",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A0",
+          "tier": "Free"
+        }
+      }
+    }
+  }
+}
