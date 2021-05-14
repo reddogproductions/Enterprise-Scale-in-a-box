@@ -290,7 +290,7 @@
               "value": "AuditIfNotExists"
             },
             "secureTransferToStorageAccountMonitoringEffect": {
-              "value": "Audit"
+              "value": "Deny"
             },
             "serverVulnerabilityAssessmentEffect": {
               "value": "AuditIfNotExists"
