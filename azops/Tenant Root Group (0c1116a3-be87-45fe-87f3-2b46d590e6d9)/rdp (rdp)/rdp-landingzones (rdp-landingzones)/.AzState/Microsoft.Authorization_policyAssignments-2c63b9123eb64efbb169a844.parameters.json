@@ -1,0 +1,49 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "Identity": {
+          "principalId": "fca795f9-b956-4286-8241-acf63a7ffb86",
+          "tenantId": "0c1116a3-be87-45fe-87f3-2b46d590e6d9",
+          "type": "SystemAssigned"
+        },
+        "Location": "westeurope",
+        "Name": "2c63b9123eb64efbb169a844",
+        "PolicyAssignmentId": "/providers/Microsoft.Management/managementGroups/rdp-landingzones/providers/Microsoft.Authorization/policyAssignments/2c63b9123eb64efbb169a844",
+        "Properties": {
+          "Description": null,
+          "DisplayName": "ISO 27001:2013",
+          "NotScopes": null,
+          "Parameters": {
+            "IncludeArcMachines": {
+              "value": "true"
+            },
+            "listOfResourceTypesWithDiagnosticLogsEnabled": {
+              "value": [
+                "Microsoft.Compute/virtualMachines",
+                "Microsoft.Compute/virtualMachineScaleSets",
+                "Microsoft.KeyVault/vaults",
+                "Microsoft.Network/applicationGateways",
+                "Microsoft.Network/networkSecurityGroups",
+                "Microsoft.Network/virtualNetworkGateways",
+                "Microsoft.Network/virtualNetworks",
+                "Microsoft.Sql/servers/databases"
+              ]
+            }
+          },
+          "PolicyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/89c6cddc-1c73-4ac1-b19c-54d1a15a42f2",
+          "Scope": "/providers/Microsoft.Management/managementGroups/rdp-landingzones"
+        },
+        "ResourceId": "/providers/Microsoft.Management/managementGroups/rdp-landingzones/providers/Microsoft.Authorization/policyAssignments/2c63b9123eb64efbb169a844",
+        "ResourceName": "2c63b9123eb64efbb169a844",
+        "ResourceType": "Microsoft.Authorization/policyAssignments",
+        "Sku": {
+          "name": "A0",
+          "tier": "Free"
+        }
+      }
+    }
+  }
+}
